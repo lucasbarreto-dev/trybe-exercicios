@@ -54,32 +54,53 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-        function changeText(){
-           document.getElementsByTagName('p').innerText = 'Daqui a 2 anos me vejo trabalhando como DEV em alguma empresa legal me preparando para me tornar DEV pleno e tendo uma qualidade de vida bem melhor.';
+        
+        //Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos.
+        function changeText(){ 
+          var textChanged = document.getElementsByTagName('p');
+          textChanged[0].innerText = 'Daqui a 2 anos me vejo trabalhando como DEV em alguma empresa legal me preparando para me tornar DEV pleno e tendo uma qualidade de vida bem melhor.'
+        }  
+        
+        //Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+        function changeColor1(){    
+          var newColor1 = document.getElementsByClassName("main-content")
+          newColor1[0].style.backgroundColor = "rgb(76,164,109)";
         }
         
-        function changeColor1(){   
-           document.getElementsByClassName('.main-content').background-color = rgb(76,164,109));
-        }
-        
-        function changeColor2(){
-          document,.getElementsByClassName('.center-content').background-color = white;
+        //Crie uma função que mude a cor do quadrado vermelho para branco.
+        function changeColor2(){    
+          var newColor2 = document.getElementsByClassName('center-content');    
+           newColor2[0].style.backgroundColor = "white";
         }
 
+        //Crie uma função que corrija o texto da tag <h1>.
         function correctText(){
-          document.getElementsByTagName('h1').innerText = 'Exercício 5.1 - JavaScript';
+           var newText = document.getElementsByTagName('h1');
+           newText[0].innerText = 'Exercício 5.1 - JavaScript';
         }
-
-        function CapsLock(){
+       
+        //Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        function CapsLock(){ //Deu certo 
           for(let i = 0; i < document.getElementsByTagName('p').length; i += 1)
+          
           if(i === 0){
-            return document.getElementsByTagName('p')[i].innerText = 'TEXTO PADRÃO DO NOSSO SITE';
+              document.getElementsByTagName('p')[i].innerText = 'TEXTO PADRÃO DO NOSSO SITE';
           } else if(i === 1){
-            return document.getElementsByTagName('p')[i].innerText = '-----';
+              document.getElementsByTagName('p')[i].innerText = '-----';
           } else if(i === 2){
-            return document.getElementsByTagName('p')[i].innerText = 'TRYBE';
+              document.getElementsByTagName('p')[i].innerText = 'TRYBE';
           }
         }
+        
+        // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+          function exibirTag(){
+            for(let i = 0; i < document.getElementsByTagName('p').length; i += 1) 
+               console.log(document.getElementsByTagName('p')[i].innerText)
+          }
+      
+          
+
+        
     </script>
   </body>
 </html>
