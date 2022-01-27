@@ -17,6 +17,12 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
+    const verifyIsNumber = (value1, value2) => {
+      if(typeof value1 === 'number' && typeof value2 !== 'number'|| typeof value1 !== 'number' && typeof value2 === 'number') {
+        throw new Error('Preencha os dois inputs com números');
+      }
+    }
+    
     function sum() {
       const value1 = document.getElementById('value1').value;
       const value2 = document.getElementById('value2').value;
@@ -24,7 +30,17 @@
       document.getElementById('result').innerHTML = `Resultado: ${result}`;
       document.getElementById('value1').value = '';
       document.getElementById('value2').value = '';
+
+      try {
+        verifyIsNumber(value1, value2);
+        return value1 + value2;
+      } catch(error) {
+        throw error.message
+        document.getElementById('result').innerHTML = `${Error}`;
+      }
+
     }
+
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', sum);
