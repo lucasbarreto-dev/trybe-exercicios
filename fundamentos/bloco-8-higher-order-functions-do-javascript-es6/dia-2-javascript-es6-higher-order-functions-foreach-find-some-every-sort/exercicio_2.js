@@ -1,5 +1,4 @@
-const books = [
-  {
+const books = [{
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
     genre: 'Fantasia',
@@ -63,9 +62,21 @@ const books = [
 
 // Adicione o código do exercício aqui: ".forEach()"
 function smallerName() {
-  let nameBook;
-  // escreva aqui o seu código
-
+  let nameBook = books[0].name;
+  books.forEach((book) => {
+    if (book.name.length < nameBook.length) {
+      nameBook = book.name;
+    }
+  })
   // Variável nameBook que receberá o valor do menor nome;
   return nameBook;
 }
+
+// SOLUÇÃO DO JOÃO VITOR SANTOS
+// function smallerName() {
+//   let nameBook;
+//   books.forEach((book) => {
+//     if (!nameBook || book.name.length < nameBook) nameBook = book.name;}) 
+//   return nameBook;
+// }
+console.log(smallerName());
