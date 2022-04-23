@@ -32,12 +32,15 @@ const conteudos = [
 
 class Content extends React.Component {
   render() {
-    return (conteudos.map((element) => <section>
-   <li>O conteúdo é: {element.conteudo}</li> 
-   <li>Status: {element.status}</li>
-   <li>Bloco: {element.bloco}</li>
-  </section> 
-  ))}
+    return (
+    conteudos.map((element) => (
+     <section>
+        <li>O conteúdo é: {element.conteudo}</li> 
+        <li>Status: {element.status}</li>
+        <li>Bloco: {element.bloco}</li>
+      </section>
+       
+    )))}
 }
 
 export default Content;
