@@ -34,12 +34,11 @@ class Content extends React.Component {
   render() {
     return (
     conteudos.map((element) => (
-     <section>
+      <section>
         <li>O conteúdo é: {element.conteudo}</li> 
         <li>Status: {element.status}</li>
         <li>Bloco: {element.bloco}</li>
       </section>
-       
     )))}
 }
 
